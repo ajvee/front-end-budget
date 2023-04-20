@@ -5,7 +5,7 @@ import TransactionForm from "./Components/TransactionForm";
 function App() {
   return (
     <>
-      <h1>My Transactions</h1>
+      <h1>Budget App</h1>
       <TransactionList />
       <TransactionForm />
     </>
