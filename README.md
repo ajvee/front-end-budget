@@ -1,6 +1,6 @@
 Hello anyone who is seeing this, 
 
-My backend will be running on this server http://localhost:3333/transactions and my Frontend will be running on http://localhost:3000/.
+My <b>Backend<b> will be running on this server http://localhost:3333/transactions and my <b>Frontend<b> will be running on http://localhost:3000/.
 
 Backend GitHub Link https://github.com/ajvee/budget-app-backend
 
