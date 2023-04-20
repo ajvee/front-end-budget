@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./TransactionForm.css"; 
 
 function TransactionForm() {
   const [newTransaction, setNewTransaction] = useState({
@@ -29,7 +30,7 @@ function TransactionForm() {
   };
 
   return (
-    <>
+    <div className="transaction-form">
       <h2>Add Transaction</h2>
       <form onSubmit={handleAddTransaction}>
         <label htmlFor="type">Type:</label>
@@ -86,11 +87,8 @@ function TransactionForm() {
         <button type="submit">Add Transaction</button>
       </form>
       <p>Amount: {newTransaction.type === "expense" ? "-" : ""}{Math.abs(newTransaction.amount).toLocaleString("en-US", { style: "currency", currency: "USD" })}</p>
-    </>
+    </div>
   );
 }
 
 export default TransactionForm;
-
-
-

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import TotalAmount from "./TotalAmount";
 import TransactionTable from "./TransactionTable";
+import "./TransactionList.css"
 
 function TransactionList() {
   const [transactions, setTransactions] = useState([]);
@@ -33,14 +34,14 @@ function TransactionList() {
   };
 
   return (
-    <>
+    <div className="transaction-list">
       <h2>Transaction List</h2>
       <TotalAmount transactions={transactions} />
       <TransactionTable
         transactions={transactions}
         onDelete={handleDeleteTransaction}
       />
-    </>
+    </div>
   );
 }
 
