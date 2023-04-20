@@ -17,7 +17,7 @@ function TransactionList() {
       const response = await axios.get("http://localhost:3333/transactions");
       setTransactions(response.data);
       setTotalAmount(
-        response.data.reduce((acc, curr) => acc + curr.amount, 0)
+        response.data.reduce((acc, curr) => acc + Number(curr.amount), 0)
       );
     } catch (error) {
       console.error(error);

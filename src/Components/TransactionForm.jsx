@@ -12,11 +12,13 @@ function TransactionForm() {
   });
 
   const handleInputChange = (event) => {
+    const value = event.target.name === "amount" ? Number(event.target.value) : event.target.value;
     setNewTransaction({
       ...newTransaction,
-      [event.target.name]: event.target.value,
+      [event.target.name]: value,
     });
   };
+  
 
   const handleAddTransaction = async (event) => {
     event.preventDefault();
