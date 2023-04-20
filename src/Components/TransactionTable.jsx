@@ -2,6 +2,10 @@ import "./Table.css"
 import React from "react";
 
 function TransactionTable({ transactions, onDelete }) {
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  }
   return (
     <table>
       <thead>
@@ -24,7 +28,7 @@ function TransactionTable({ transactions, onDelete }) {
               {transaction.type === "income" ? "+" : "-"}${transaction.amount}
             </td>
             <td>{transaction.description}</td>
-            <td>{transaction.date}</td>
+            <td>{formatDate(transaction.date)}</td>
             <td>{transaction.from}</td>
             <td>
               <button onClick={() => onDelete(transaction.id)}>

@@ -24,3 +24,7 @@ function TotalAmount({ transactions }) {
 }
 
 export default TotalAmount;
+
+
+
+
